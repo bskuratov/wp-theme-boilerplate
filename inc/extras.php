@@ -62,3 +62,12 @@ if( function_exists('acf_add_options_page') ) {
 //   $return = require $file;
 //   echo ob_get_clean();
 // }
+
+// Contact Form 7 remove styles
+// add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+// function wps_deregister_styles() {
+//     wp_deregister_style( 'contact-form-7' );
+// }
+
+// Contact Form 7 fix markup(remove p and br)
+// add_filter('wpcf7_autop_or_not', '__return_false');
