@@ -7,11 +7,6 @@
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
   'Helvetica', 'Arial', sans-serif !default;
 
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-  'Monaco', monospace !default;
-
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
@@ -55,6 +50,10 @@ $breakpoints: (
   'xl': only screen and
     (
       min-width: 1440px
+    ),
+  'xxl': only screen and
+    (
+      min-width: 1920px
     )
 ) !default;
 

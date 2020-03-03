@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Ben_Theme
+ * @package theme-name
  */
 
  get_header(); ?>

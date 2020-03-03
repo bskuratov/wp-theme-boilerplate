@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Ben_Theme
+ * @package theme-name
  */
 
 get_header(); ?>

@@ -4,9 +4,6 @@ const postcss = require('gulp-postcss');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const cheerio = require('gulp-cheerio');
 const cssnano = require('cssnano');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
@@ -63,22 +60,3 @@ gulp.task('libs', () => {
 
 // Watchers
 gulp.task('watch', gulp.series('sass', 'libs', 'scripts', 'browserSync'));
-
-// Sprites
-gulp.task('sprite', () => {
-  return gulp
-    .src('./img/icon-*.svg')
-    .pipe(svgmin())
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(
-      cheerio({
-        run($) {
-          $('[fill]').removeAttr('fill');
-          $('svg').attr('style', 'display:none');
-        },
-        parserOptions: { xmlMode: true }
-      })
-    )
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./img/'));
-});

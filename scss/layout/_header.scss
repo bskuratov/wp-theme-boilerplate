@@ -3,96 +3,11 @@
 // -----------------------------------------------------------------------------
 .page-header {
   position: relative;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
 
   &__logo {
-  }
-
-  &__checkbox {
-    display: none;
-  }
-
-  &__hamburger {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 50;
-
-    span {
-      position: relative;
-      font-size: 0;
-      width: 25px;
-      height: 2px;
-      display: block;
-      background: #1a3331;
-      @include transition;
-
-      &::before,
-      &::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 2px;
-        display: block;
-        background: #1a3331;
-        content: '';
-        @include transition;
-      }
-
-      &::before {
-        top: -10px;
-      }
-
-      &::after {
-        bottom: -10px;
-      }
-    }
-  }
-
-  &__checkbox:checked ~ &__hamburger {
-    span {
-      background: transparent;
-
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        bottom: 0;
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
-  &__checkbox:checked ~ &__nav {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  &__nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 20px 30px;
-    padding-top: 100px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(100%);
-    @include transition;
-
-    ul {
-      list-style: none;
-    }
   }
 }
