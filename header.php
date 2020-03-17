@@ -9,8 +9,9 @@
  * @package theme-name
  */
 
-?><!doctype html>
-<html <?php language_attributes(); ?>>
+?>
+<!doctype html>
+<html <?php language_attributes(); ?> class="is-observer">
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />

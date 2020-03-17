@@ -23,14 +23,14 @@ function theme_acf_blocks_init() {
 			'name'				=> 'XXX',
 			'title'				=> __('XXX Block'),
 			'description'		=> __('XXX block'),
-      'render_callback'	=> 'my_acf_block_render_callback',
+      'render_callback'	=> 'theme_acf_block_render_callback',
 			'icon'				=> 'align-center',
 			'keywords'			=> array( 'XXX' ),
       'mode' 	=> 'edit',
 		));
   }
 }
-add_action('acf/init', 'my_acf_blocks_init');
+add_action('acf/init', 'theme_acf_blocks_init');
 
 // Remove the default gutenberg block
 // https://rudrastyh.com/gutenberg/remove-default-blocks.html

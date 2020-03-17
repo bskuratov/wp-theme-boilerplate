@@ -26,9 +26,9 @@ require_once('includes/blocks.php');
 require_once('includes/enqueue.php');
 
 //* After Setup
-add_action( 'after_setup_theme', 'together_after_setup_theme' );
+add_action( 'after_setup_theme', 'theme_after_setup_theme' );
 
-function together_after_setup_theme() {
+function theme_after_setup_theme() {
 
 	add_theme_support( 'html5' );
 
