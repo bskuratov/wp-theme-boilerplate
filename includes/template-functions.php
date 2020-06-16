@@ -126,3 +126,33 @@ function theme_admin_bar_render() {
     $wp_admin_bar->remove_menu('comments');
 }
 add_action( 'wp_before_admin_bar_render', 'theme_admin_bar_render' );
+
+
+// all posts on archive
+// function custom_posts_per_page( $query ) {
+//   if ( $query->is_archive() && $query->is_main_query() ) {
+//       $query->set( 'posts_per_page', -1 );
+//   }
+// }
+// add_action( 'pre_get_posts', 'custom_posts_per_page' );
+
+// remove admin bar bump
+function remove_admin_bar_bump() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'remove_admin_bar_bump');
+
+
+
+// Remove Categories and Tags
+// add_action('init', 'theme_remove_tax');
+// function theme_remove_tax() {
+//     register_taxonomy('category', array());
+//     register_taxonomy('post_tag', array());
+// }
+
+// add_action('admin_menu', 'theme_remove_sub_menus');
+// function theme_remove_sub_menus() {
+//     remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=category');
+//     remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=post_tag');
+// }

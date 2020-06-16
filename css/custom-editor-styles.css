@@ -9,15 +9,10 @@
   max-width: 1200px;
 }
 
-/* .acf-image-uploader .image-wrap {
-  width: 100%;
-  max-width: none !important;
-} */
-
-/* .acf-image-uploader img {
-  width: 100%;
-} */
-
+.edit-post-visual-editor .block-editor-writing-flow__click-redirect {
+  min-height: 10vh;
+}
+/*
 .underline {
   position: relative;
   color: #000;
@@ -42,4 +37,4 @@
     top: 90%;
     height: 20px;
   }
-}
+} */

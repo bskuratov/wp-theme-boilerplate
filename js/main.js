@@ -59,19 +59,22 @@ $(document).ready(() => {
   }
 
   if (isObserver) {
-    observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -15% 0px' }
+    );
   }
 
   function isTouchDevice() {
     const prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-    const mq = query => {
+    const mq = (query) => {
       return window.matchMedia(query).matches;
     };
 
@@ -102,9 +105,9 @@ $(document).ready(() => {
   // leading edge, instead of the trailing.
   function debounce(func, wait, immediate, ...args) {
     let timeout;
-    return function() {
+    return function () {
       const context = this;
-      const later = function() {
+      const later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -138,9 +141,7 @@ $(document).ready(() => {
       const scrollTop = $('html').scrollTop()
         ? $('html').scrollTop()
         : $('body').scrollTop(); // Works for Chrome, Firefox, IE...
-      $('html')
-        .addClass('disable-scrolling')
-        .css('top', -scrollTop);
+      $('html').addClass('disable-scrolling').css('top', -scrollTop);
     }
   }
 
