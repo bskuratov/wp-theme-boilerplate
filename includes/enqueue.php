@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', 'theme_styles');
 // Add JS
 function theme_js() {
   // wp_deregister_script('jquery');
-	// wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
+	// wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
   // wp_enqueue_script('jquery');
 
   wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/js/picturefill.min.js#asyncload', '', '', false);
