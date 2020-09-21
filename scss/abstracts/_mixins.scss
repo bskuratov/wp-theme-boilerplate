@@ -58,6 +58,10 @@
   transition: $prop 0.3s ease-in;
 }
 
+@mixin transition-reveal($prop: all) {
+  transition: $prop 1s cubic-bezier(0.405, 0.005, 0, 1);
+}
+
 @mixin objectFit {
   position: absolute;
   top: 0;
