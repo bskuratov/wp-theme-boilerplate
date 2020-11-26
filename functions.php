@@ -43,7 +43,9 @@ function theme_after_setup_theme() {
 
 	add_theme_support( 'menus' );
 
-	add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'post-thumbnails' );
+
+  remove_theme_support( 'core-block-patterns' );
 
 	register_nav_menus( array(
     'header-menu' => esc_html__( 'Header Menu' ),

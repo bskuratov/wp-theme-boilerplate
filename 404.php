@@ -10,8 +10,7 @@
 get_header(); ?>
 
 <h1>404</h1>
-<p>Nothing here...</p>
-<p>(╯°□°）╯︵ ┻━┻</p>
+<p>Sorry, something went wrong!</p>
 <a href="<?php echo home_url(); ?>">Go Back</a>
 
 <?php get_footer(); ?>
